@@ -1,28 +1,15 @@
 import { useState } from 'react';
-import { Menu, Phone, Mail,  ChevronRight, Map } from 'lucide-react';
+import { Menu, ChevronRight,} from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import Topbar from './topbar';
 
 function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
    
 
     return (
-     
- <div >
-    {/* Top Bar */}
-      <div className="bg-violet-800 text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center">
-        <div className="hidden md:flex space-x-4">
-          <span className="flex items-center"><Map className="w-4 h-4 mr-2" /> support@rezilla.com</span>
-          </div>
-          <div className="flex space-x-4 text-sm">
-            <span className="flex items-center"><Phone className="w-4 h-4 mr-2" /> +1 206-214-2298</span>
-            <span className="flex items-center"><Mail className="w-4 h-4 mr-2" /> support@rezilla.com</span>
-          </div>
-          
-        </div>
-      </div>
- {/* Navigation */}
+        <div>
+  <Topbar/>
 <nav className="bg-white sticky top-0 z-50">
 <div className="container mx-auto px-4">
   <div className="flex justify-between items-center h-20">
